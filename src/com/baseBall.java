@@ -29,7 +29,13 @@ public class baseBall {
 		while (true) {
 			System.out.println("숫자 3개 입력");
 			for (int j = 0; j < 3; j++) {
-				answer[j] = sc.nextInt();
+				int n = sc.nextInt();
+				if(n>=0 && n<10) {
+					answer[j] = n;
+				}else { 
+					System.out.println("0부터 9까지의 수를 입력해주세요.");
+					j--;
+				}
 			}
 			for (int k = 0; k < 3; k++) {
 				if (game[k] == answer[k]) {
@@ -47,8 +53,8 @@ public class baseBall {
 			count = count +3;
 			
 		
-			if(out == 3) {
-				System.out.println("삼진아웃으로 게임에서 패배하셨습니다.");
+			if(out >= 3) {
+				System.out.println("게임에서 패배하셨습니다.");
 				break;
 			}
 			if(count == 9) {

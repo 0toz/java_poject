@@ -17,6 +17,8 @@ public class baseBall {
 			i++;
 			if (i >= 1 && game[i] == game[i - 1]) {
 				i--;
+			}else if(i ==2 && game[i] == game[i - 2]) {
+				i--;
 			}
 			if (i == 2)	break;
 		}

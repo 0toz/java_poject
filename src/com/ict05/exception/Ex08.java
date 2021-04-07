@@ -61,10 +61,10 @@ public class Ex08 {
 			
 	
 			HashMap<String, String> map2 = new HashMap<String, String>();
-			mp2.put("이름", "고길동");
-			mp2.put("나이", "34");
-			mp2.put("주소", "도봉구");
-			mp2.put("성별", "남");
+			map2.put("이름", "고길동");
+			map2.put("나이", "34");
+			map2.put("주소", "도봉구");
+			map2.put("성별", "남");
 			System.out.println("map2");
 	
 			for(String k : map2.keySet()) {

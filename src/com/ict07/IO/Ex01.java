@@ -1,6 +1,7 @@
 package com.ict07.IO;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 
 public class Ex01 {
 	public static void main(String[] args) {
@@ -23,10 +24,14 @@ public class Ex01 {
 			C:\study\ util    부모경로              D2Coding 자식경로
 			C:\study\ util\D2CodingAll "\ u"가 의미가 있기때문에 오류발생.
 			*/
+			//날짜 형식 지정.
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+			
+			
 			if(file2.isDirectory()) {
-				System.out.println("디렉토리 : " + file2);
-			}else {
-				System.out.println("파일: " + file2);
+				System.out.println("디렉토리 : " + file2 + "크기가 존재하지않음 "+ "수정한 날짜 :" + sdf.format(file2.lastModified()));
+			}else {			
+				System.out.println("파일: " + file2 + "크기 : " + (int)(file2.length()/1024) + "KB");
 			}
 			
 			

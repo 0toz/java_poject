@@ -4,10 +4,10 @@ public class Ex16_main {
 	public static void main(String[] args) {
 		Ex16 t1 = new Ex16();
 		
-		Thread thread1 = new Thread(t1);
+		Thread thread1 = new Thread(t1,"dog");
 		thread1.start();
 		
-		Thread thread2 = new Thread(t1);
+		Thread thread2 = new Thread(t1,"cat");
 		thread2.start();
 		
 		

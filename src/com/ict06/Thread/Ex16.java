@@ -9,15 +9,11 @@ public class Ex16 implements Runnable {
 
 	@Override
 	public synchronized void run() {
-		x = 0;
 
-		if(Thread.currentThread().getName().equals("cat")) {
-			x += 50;
-		}
 		for (int i = 0; i < 100; i++) {
 			System.out.println(Thread.currentThread().getName() + " : " + (++x));
 
-			if (x == 50 || x ==100 || x==150) {
+			if (x == 50 || x ==100 ) {
 				try {
 					
 					wait();
